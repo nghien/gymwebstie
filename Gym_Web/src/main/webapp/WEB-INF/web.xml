@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+	
+	<welcome-file-list>
+    <welcome-file>ForwardLogin</welcome-file>
+   <welcome-file>index.jsp</welcome-file> 
+    <!-- <welcome-file>/View/Login.jsp</welcome-file> -->
+  </welcome-file-list>
+  
+	<servlet>
+ <servlet-name>spring</servlet-name>
+ <servlet-class>
+  org.springframework.web.servlet.DispatcherServlet
+ </servlet-class>
+ <load-on-startup>1</load-on-startup>
+</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ForwardLogin</display-name>
+		<servlet-name>ForwardLogin</servlet-name>
+		<servlet-class>UIT.SE325H22.Group2.controller.ForwardLogin</servlet-class>
+	</servlet>
+
+<servlet-mapping>
+
+
+ <servlet-name>spring</servlet-name>
+ <url-pattern>/</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+	<servlet-name>ForwardLogin</servlet-name>
+	<url-pattern>/ForwardLogin</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <jsp-file>/pages/client/Home.jsp</jsp-file>
+</servlet>
+<!--mapping-->
+<servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/trangchu</url-pattern>   
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>Map1</servlet-name>
+    <jsp-file>/pages/client/ListNutrition.jsp</jsp-file>
+</servlet>
+<!--mapping-->
+<servlet-mapping>
+    <servlet-name>Map1</servlet-name>
+    <url-pattern>/danhsachdinhduong</url-pattern>   
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>Map2</servlet-name>
+    <jsp-file>/pages/client/Muscle.jsp</jsp-file>
+</servlet>
+<!--mapping-->
+<servlet-mapping>
+    <servlet-name>Map2</servlet-name>
+    <url-pattern>/danhsachnhomco</url-pattern>   
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>Map3</servlet-name>
+    <jsp-file>/pages/admin/dashboard.jsp</jsp-file>
+</servlet>
+<!--mapping-->
+<servlet-mapping>
+    <servlet-name>Map3</servlet-name>
+    <url-pattern>/admin</url-pattern>   
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>Map4</servlet-name>
+    <jsp-file>/pages/client/Contact.jsp</jsp-file>
+</servlet>
+<!--mapping-->
+<servlet-mapping>
+    <servlet-name>Map4</servlet-name>
+    <url-pattern>/lienhe</url-pattern>   
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>Map5</servlet-name>
+    <jsp-file>/pages/client/Login.jsp</jsp-file>
+</servlet>
+<!--mapping-->
+<servlet-mapping>
+    <servlet-name>Map5</servlet-name>
+    <url-pattern>/dangnhap</url-pattern>   
+</servlet-mapping>
+
+
+<context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>
+    /WEB-INF/spring-servlet.xml,
+   /WEB-INF/spring-security.xml
+  </param-value>
+  </context-param>
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <filter>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>springSecurityFilterChain</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+
+</web-app>

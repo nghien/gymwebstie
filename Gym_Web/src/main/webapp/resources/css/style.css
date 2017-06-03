@@ -1,0 +1,25 @@
+legend.login-title {
+    margin: auto;
+}
+
+.login-title-group {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    text-align: center;
+    background: url(https://radiustheme.com/demo/wordpress/gymedge/wp-content/themes/gymedge/assets/img/banner.jpg) no-repeat scroll center center / cover;
+    margin-bottom: 30px;
+}
+
+button.btn-read-more-fill.btn-send.disabled {
+    margin-bottom: 20px;
+}
+
+legend.login-title {
+    color: white;
+}
+
+.img-admin {
+    margin-top: 46px;
+    margin-left: 347px!important;
+}
